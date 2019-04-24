@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="MovieManagement_Web.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manage Movies</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/lobipanel/lobipanel.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/pace/flash.css" rel="stylesheet" type="text/css" />
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+    <link href="assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/toastr/toastr.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/emojionearea/emojionearea.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/monthly/monthly.css" rel="stylesheet" type="text/css" />
+    <link href="assets/dist/css/stylehealth.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/dist/css/calender.css" rel="stylesheet" type="text/css" />
+    <style>
+        .backCss {
+            background: #000000;
+            opacity: 0.4;
+            filter: alpha(opacity=100);
+            /*background: rgb(225,225,225);*/
+            background: #000000;
+            /*background: rgba(225,225,225,.3);*/
+            background: #000000;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cFF0000,endColorstr=#4cFF0000);
+            zoom: 1;
+        }
+
+        .divElement {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+            background-size: 100px 100px;
+            z-index: 34249320342;
+        }
+
+        td, th {
+            vertical-align: text-top;
+            white-space: nowrap;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition sidebar-mini">
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top ">
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-tasks"></span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                    </div>
+                </nav>
+            </header>
+            <aside class="main-sidebar">
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                    </div>
+
+                    <!-- sidebar menu -->
+                    <ul class="sidebar-menu">
+                        <li class="active">
+                            <a href="dashboard"><i class="fa fa-hospital-o"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="sidebar-menu">
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-hospital-o"></i><span>Manage</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="manage-movies.aspx">Manage Movies</a></li>
+                                  <li><a href="movie-list.aspx">Movies List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar -->
+            </aside>
+            <div class="content-wrapper">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer class="main-footer">
+            </footer>
+        </div>
+    </form>
+    <script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/lobipanel/lobipanel.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+    <script src="assets/dist/js/custom1.js" type="text/javascript"></script>
+    <script src="assets/plugins/toastr/toastr.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/sparkline/sparkline.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/datamaps/d3.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/datamaps/topojson.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/datamaps/datamaps.all.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/counterup/waypoints.js" type="text/javascript"></script>
+    <script src="assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/chartJs/Chart.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/emojionearea/emojionearea.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/monthly/monthly.js" type="text/javascript"></script>
+    <script src="assets/plugins/datamaps/d3.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/datamaps/topojson.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/datamaps/datamaps.all.min.js" type="text/javascript"></script>
+    <script src="assets/dist/js/custom.js" type="text/javascript"></script>
+</body>
+</html>
